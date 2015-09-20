@@ -55,18 +55,13 @@ angular.module('starter.services', [])
 })
 
 .factory('text', ['$http', function ($http) {
-
-    // Twilio Credentials 
-    var accountSid = 'AC7f68e564da4418868e422ab44588b49f';
-    var authToken = '66dfc254a5079bbed9b2f574c752e3e4';
-    var myNumber = '16503766941';
-
+    alert('hi');
     return{
-        sendMsg: function(message) {
-            $http.POST('http://localhost:3008/send?message='+message);
+        sendMsg: function() {
+            $http.get('http://localhost:3008/send?message=I am at techcrunch disrupt 2015 right now!');
         }
     } 
 
 
 
-});
+}]);

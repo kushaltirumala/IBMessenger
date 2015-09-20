@@ -35,7 +35,7 @@ angular.module('starter.controllers', [])
                         } else {
                             //alert($scope.data.wifi);
                             //The input data is the $scope.data.wifi info
-                            
+
                             return $scope.data.wifi;
                         }
                     }
@@ -57,7 +57,7 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('ChatDetailCtrl', function ($scope, $stateParams, Chats, $ionicPopup, $timeout, $ionicLoading ) {
+.controller('ChatDetailCtrl', function ($scope, $stateParams, Chats, $ionicPopup, $timeout, $ionicLoading, text ) {
     $scope.chat = Chats.get($stateParams.chatId);
     //Text.get($stateParams);
 
@@ -83,6 +83,9 @@ angular.module('starter.controllers', [])
         }, 6000);
     };
 
+    $scope.sendSms = function() {
+        text.sendMsg();
+    }
 
 })
 
