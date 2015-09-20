@@ -1,1 +1,30 @@
 /* Empty. Add your own CSS if you like */
+
+.me {
+    margin-right: 30%;
+    border: 1px solid #29A329;
+    background-color: #2ecc71;
+    padding: 10px;
+    display: block;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius:3px;
+}
+
+.you {
+    margin-left: 30%;
+    border: 1px solid #005CE6;
+    background-color: #3498db;
+    padding: 10px;
+    display: block;
+    align-content: right;
+    color: white;
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius:3px;
+}
