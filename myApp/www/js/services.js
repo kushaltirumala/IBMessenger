@@ -54,20 +54,19 @@ angular.module('starter.services', [])
     };
 })
 
-.factory('Text', function () {
+.factory('text', ['$http', function ($http) {
 
     // Twilio Credentials 
     var accountSid = 'AC7f68e564da4418868e422ab44588b49f';
     var authToken = '66dfc254a5079bbed9b2f574c752e3e4';
+    var myNumber = '16503766941';
 
-    //require the Twilio module and create a REST client 
-    var client = require('twilio')(accountSid, authToken);
+    return{
+        sendMsg: function(message) {
+            $http.POST('http://localhost:3008/send?message='+message);
+        }
+    } 
 
-    client.messages.create({
-        to: "6507878175",
-        from: "+16503766941",
-        body: "FUCK",
-    }, function (err, message) {
-        console.log(message.sid);
-    });
+
+
 });
