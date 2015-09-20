@@ -11,6 +11,8 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
+// QUERY FOR WATSON http://watsonmessenger.mybluemix.net/profile?text=ADDTEXTHERE
+
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
