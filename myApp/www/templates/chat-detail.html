@@ -6,7 +6,16 @@
 -->
 <ion-view view-title="{{chat.name}}">
     <ion-content class="padding">
-        <img ng-src="{{chat.face}}" style="width: 64px; height: 64px; border-radius:5px;">
+        <div style="color:green; font-size:40px; padding-bottom:10px;">
+            <div class="item item-input-inset" style="border:0px;">
+<label class="item-input-wrapper" style="height:50px;">
+             <input style="width:100%;" id="victimNum" type="text" name="firstname" placeholder="Number (NNN-NNN-NNNN)"> </input>
+                         </label>
+        </div>
+       
+        
+        </div>
+             <hr>     
         <div class="me">
             <p>
                 {{chat.lastText}}
@@ -19,14 +28,36 @@
             <div class="item item-input-inset" style="border:0px;">
 
                 <label class="item-input-wrapper" style="height:50px;">
-                    <input type="text" placeholder="Message" style="margin:0px; padding:0px;">
+                    <input style="width:100%;" type="text" id="newMsg" placeholder="Message" style="margin:0px; padding:0px;">
                 </label>
-                <button class="button button-positive">
+                <button class="button button-positive" id="submit" type="submit" ng-click="sendSms()">
                     <i class="icon ion-paper-airplane"></i>
                 </button>
             </div>
 
         </div>
+        <!-- NEW SECTION HERE
+        <section id="module">
+    <header id="top-bar">
+        <input id="victimNum" type="text" name="firstname" placeholder="Number of Victim (NNN-NNN-NNNN)"> </input>
+      <h1></h1>
+    </header>
 
+    <ol id="convo">
+      <li>
+        <div id="messageIntro">
+            <p id="welcome">
+              Welcome to creeper bot! Go ahead and type in a number above, and type messages down below.
+              Copyright Pulkit Industries.
+            </p>
+        </div>
+      </li>
+    </ol>
+    <p id="errormsg"></p>
+    <footer>
+      <textarea id="newMsg"></textarea>
+      <button id="submit" type="submit" onclick="sendSms()"> Send</button>
+    </footer>
+  </section> -->
     </ion-content>
 </ion-view>
