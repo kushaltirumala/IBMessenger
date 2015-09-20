@@ -6,16 +6,11 @@
 -->
 <ion-view view-title="{{chat.name}}">
     <ion-content class="padding">
-        <div style="color:green; font-size:40px; padding-bottom:10px;">
-            <div class="item item-input-inset" style="border:0px;">
-<label class="item-input-wrapper" style="height:50px;">
-             <input style="width:100%;" id="victimNum" type="text" name="firstname" placeholder="Number (NNN-NNN-NNNN)"> </input>
-                         </label>
-        </div>
-       
-        
-        </div>
-             <hr>     
+
+        <a class="button button-outline button-positive" ng-click="showPopup()" style="border-radius:8px; margin:2%; width:96%;">
+                Analyze
+            </a>
+        <hr>
         <div class="me">
             <p>
                 {{chat.lastText}}
@@ -24,7 +19,9 @@
         <div class="you">
             {{chat.lastText}}
         </div>
+        <hr>
         <div class="list">
+            
             <div class="item item-input-inset" style="border:0px;">
 
                 <label class="item-input-wrapper" style="height:50px;">
