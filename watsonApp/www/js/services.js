@@ -6,34 +6,30 @@ angular.module('starter.services', [])
     // Some fake testing data
     var chats = [{
         id: 0,
-        name: 'Ben Sparrow',
-        lastText: 'You on your way?',
-        number: '6507878175',
-        face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+        name: 'Kushal Tirumala',
+        lastText: 'Text me, I got Twilio Working',
+        number: '4088322144',
+        face: 'http://quillapp.io/kushal.png'
   }, {
         id: 1,
-        name: 'Max Lynx',
-        lastText: 'Hey, it\'s me',
-        number: '4088322144',
-        face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
-  }, {
-        id: 2,
-        name: 'Adam Bradleyson',
-        lastText: 'I should buy a boat',
+        name: 'Rolando Cruz',
+        lastText: 'I am sleeping always',
         number: '4153786584',
-        face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
-  }, {
+        face: 'http://quillapp.io/rolando.png'
+  }
+                , {
+        id: 2,
+        name: 'Ethan Lee',
+        lastText: 'Hack the north is awesome!!!',
+        number: '4153786584',
+        face: 'http://quillapp.io/ethan.png'
+  }
+                , {
         id: 3,
-        name: 'Perry Governor',
-        lastText: 'Look at my mukluks!',
-        number: '6507878175',
-        face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
-  }, {
-        id: 4,
-        name: 'Mike Harrington',
-        lastText: 'This is wicked good ice cream.',
-        number: '6507878175',
-        face: 'https://pbs.twimg.com/profile_images/578237281384841216/R3ae1n61.png'
+        name: 'Mahesh Murag',
+        lastText: 'Lol I hate the SAT',
+        number: '4153786584',
+        face: 'http://quillapp.io/mahesh.png'
   }];
 
     return {
@@ -55,7 +51,6 @@ angular.module('starter.services', [])
 })
 
 .factory('text', ['$http', function ($http) {
-    alert('hi');
     return{
         sendMsg: function() {
             $http.get('http://localhost:3008/send?message=I am at techcrunch disrupt 2015 right now!');
